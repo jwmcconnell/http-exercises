@@ -20,6 +20,9 @@ const server = createServer((req, res) => {
   </head>
   <body>
     <h1>Hello There Site Visitor</h1>
+    <script>
+      console.log('I am a script');
+    </script>
   </body>
   </html>`);
 });
