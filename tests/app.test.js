@@ -10,7 +10,7 @@ describe('application routes', () => {
       });
   });
 
-  it('returns a page with the header Blue', () => {
+  it('returns a page with the header Welcome', () => {
     return request(app)
       .get('/')
       .then(res => {
