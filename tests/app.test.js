@@ -34,7 +34,7 @@ describe('application routes', () => {
       });
   });
 
-  it('returns a page with the header Not Fount', () => {
+  it('returns a page with the header Not Found', () => {
     return request(app)
       .get('/asfd')
       .then(res => {
