@@ -9,4 +9,36 @@ describe('application routes', () => {
         expect(res.text).toEqual(expect.stringContaining('Buddy'));
       });
   });
+
+  it('returns a page with the header Blue', () => {
+    return request(app)
+      .get('/blue')
+      .then(res => {
+        expect(res.text).toEqual(expect.stringContaining('<h1>Blue</h1>'));
+      });
+  });
+
+  it('returns a page with the header Red', () => {
+    return request(app)
+      .get('/red')
+      .then(res => {
+        expect(res.text).toEqual(expect.stringContaining('<h1>Red</h1>'));
+      });
+  });
+
+  it('returns a page with the header Green', () => {
+    return request(app)
+      .get('/green')
+      .then(res => {
+        expect(res.text).toEqual(expect.stringContaining('<h1>Green</h1>'));
+      });
+  });
+
+  it('returns a page with the header Not Fount', () => {
+    return request(app)
+      .get('/asfd')
+      .then(res => {
+        expect(res.text).toEqual(expect.stringContaining('<h1>Not Found</h1>'));
+      });
+  });
 });
