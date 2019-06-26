@@ -12,6 +12,14 @@ describe('application routes', () => {
 
   it('returns a page with the header Blue', () => {
     return request(app)
+      .get('/')
+      .then(res => {
+        expect(res.text).toEqual(expect.stringContaining('<h1>Welcome</h1>'));
+      });
+  });
+
+  it('returns a page with the header Blue', () => {
+    return request(app)
       .get('/blue')
       .then(res => {
         expect(res.text).toEqual(expect.stringContaining('<h1>Blue</h1>'));
