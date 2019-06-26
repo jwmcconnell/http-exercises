@@ -6,7 +6,7 @@ describe('application routes', () => {
     return request(app)
       .get('/')
       .then(res => {
-        expect(res.text).toEqual(expect.stringContaining('Buddy'));
+        expect(res.text).toEqual(expect.stringContaining('<li>Buddy</li>'));
       });
   });
 
